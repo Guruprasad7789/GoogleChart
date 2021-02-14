@@ -1,0 +1,13 @@
+<!-- <div id="curve_chart" style="width: 900px; height: 500px"></div>
+<app-high-chart></app-high-chart> 
+<audio controls>
+    <source src="https://www.computerhope.com/jargon/m/example.mp3" type="audio/ogg">
+  </audio>-->
+  <div>
+      <button (click)="play()">Play</button>
+      <button (click)="pause()">Pause</button>
+      <button (click)="rePlay()">Replay</button>
+  </div>
+  <span>{{currentTime}}</span>
+  <mat-slider min="0" [max]="duration" step="1" [value]="seek" (input)="changeSlider($event)" ></mat-slider>
+  <span>{{durationStr}}</span>
